@@ -7,20 +7,21 @@
     <meta name="Description" content="{{ page.description }}">
     {% endif %}
     <title>{{ page.title }} - {{ site.title }}</title>
-    {% if site.gtm_id != nil %}
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){
-        w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','{{ site.gtm_id }}');
-    </script>
-    <!-- End Google Tag Manager -->
-    {% endif %}    
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script>
+    if (window.location.host === 'about.parallelmarkets.com') {
+      window._pmAnalyticsConfig = {
+        segment_key: 'FsZOMatHS0d0uzap67Vjcic5sR0GAr1j',
+        auto_track_pageview: true,
+        code_name: 'Parallel About Site',
+        code_version: 'production'
+      };
+    }
+    </script>
+    <script async src="https://web.pm-metrics.com/prod/parallel-analytics.js"></script>
   </head>
   <body>
     <header class="page-header" role="banner">
